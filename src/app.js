@@ -24,19 +24,19 @@ const helper = require('./util/helper')(logger);
 // open a mongodb connection
 const mongoClient = require('mongodb').MongoClient;
 mongoClient.connect(config.mongodb.connectionString, { db: { bufferMaxEntries: 0 } },
-   (err, db) => {
+    (err, db) => {
     if(err) {
         logger.error(err.message);
         process.exit(1);
     }
-
-   // create the application context
-   const appContext = {
+    
+    // create the application context
+    const appContext = {
        config: config,
        helper: helper,
        logger: logger,
        db : db
-   };
+    };
 
     // static content
     app.use('/', express.static( __dirname + '/wwwroot', { 'dotfiles':'ignore' }));
@@ -50,10 +50,7 @@ mongoClient.connect(config.mongodb.connectionString, { db: { bufferMaxEntries: 0
     });
 
     // load the routes
-    fs.readdirSync('./routes/').forEach( (name)=>
-    {
-        app.use(require('./routes/'+name)(appContext));
-    });
+    app.use(require('./routes')(appContext));
 
     // set socket io connection
     io.on('connection',(socket)=>

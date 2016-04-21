@@ -23,7 +23,7 @@ var addUsers = ()=> {
         "image":"dimotta.jpg",
         "summary": "Web addicted, passionate about cloud, mobile and running.",
         "following": [user2Id,user3Id],
-        "followers": [user2Id]
+        "followers": [user2Id,user3Id]
     },{
         "_id": user2Id,
         "username": "dinolupo",
