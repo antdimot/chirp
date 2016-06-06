@@ -4,8 +4,7 @@ module.exports = (ctx) => {
     const router = require('express').Router();
 
     // get a single image
-    const single = require('./single')(ctx);
-    router.get('/:resource', single);
+    router.get('/:resource', require('./single')(ctx));
 
     return router;
 }

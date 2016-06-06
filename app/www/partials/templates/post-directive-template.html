@@ -1,9 +1,5 @@
   <div class="panel panel-default">
     <div class="panel-body">
-      <small ng-show="data.isrepost">
-        <span class="glyphicon glyphicon-retweet" style="color:green">
-        </span> <a style="color:silver" href="#/info/{{data.repostusername}}">{{data.repostdisplayname}}</a><br>
-      </small>
       <span style="float:left">
         <img class="img-rounded" ng-src="{{data.imagepath}}" width="55px" height="55px">&nbsp;
       </span>
@@ -12,8 +8,5 @@
         <small>{{data.timestamp | date:'MM/dd/yyyy @ h:mma' }}</small>
         <div ng-bind-html="data.text"></div>
       </span>
-    </div>
-    <div class="panel-footer" ng-show="logged">
-      <a ng-show="data.canrepost" ng-click="vm.repost(data._id)"><span class="glyphicon glyphicon-retweet" aria-hidden="true" /></a>
     </div>
   </div>

@@ -9,6 +9,15 @@
             ctrl.loadPosts = function() {
                 DataService.getPublicPostList(
                     function (data) {
+
+                        const panelcolors = ['primary','default','success','info','warning','danger'];
+                        const textcolors = ['white','red','blue','blue','red','blue'];
+
+                        data.forEach((element,index)=> {
+                            element.panelcolor = panelcolors[index % 6];
+                            element.textcolor = textcolors[index % 6];
+                        });
+
                         ctrl.posts = data;
                     });
             };

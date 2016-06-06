@@ -17,7 +17,7 @@ for the last updates. [Activity board](https://trello.com/b/prRPzzir).
 - unfollow an user
 - sign up
 - log on
-- repost (aka retweet)
+
 
 ### Try it now on your workstation with Docker
 
@@ -60,20 +60,20 @@ docker run --name chirp -p 3000:3000 --link mongodb:mongodb dinolupo/chirp
 
 
 ### Todo (missing features):
-- response
 - searching (users and messages)
-- security management (client/server comunication)
-- hashtag
+- security enhancements (ie. add jwt)
+- hashtag support
 - rest api documentation
 - edit user information
-- add custom user image
+- customize user info (ie. image profile)
+- repost
 
 ### How to install:
 1. Clone the project
 2. Install *nodejs*
 3. Install *mongodb*
 4. Restore *node_modules* using ```npm install```
-5. Execute **node app**
+5. Execute **node main**
 
 ### Known issues:
 - no check of the username (duplication) when signup

@@ -1,8 +1,7 @@
 /* jshint esnext: true */
 /* jslint node: true */
 
-module.exports = (logger)=>
-{
+module.exports = (logger)=> {
     return {
         action: {
             jsonResult: (req,res,data)=> {

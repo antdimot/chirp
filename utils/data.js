@@ -1,5 +1,4 @@
-/* jshint esnext: true */
-/* jslint node: true */
+// This file mongodb script provides the initialization of database chirp. 
 
 var db = db.getSiblingDB("chirp");
 var user1Id = ObjectId().str;
@@ -71,12 +70,9 @@ var addPosts = ()=> {
         "text": "Are you ready for production?"
     },{
         "_id": post3Id,
-        "repostid": post2Id,
-        "repostdisplayname": "Antonio Di Motta",
-        "repostusername": "dimotta",
         "username": "userdemo1",
         "ownerid": user1Id,
-        "displayname": "I'm not a bot",
+        "displayname": "I'm not a bot :(",
         "image": "ball.gif",
         "timestamp": new Date("2015-09-13T16:36:00Z").toISOString(),
         "text": "Are you ready for production?"

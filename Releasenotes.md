@@ -1,7 +1,9 @@
+## 04/06/2016
+* Refactoring of post directive
+
 ## 05/04/2016
 * Added docker file
 * Refactoring of the routes
-* Repost enhancements
 
 ## 24/02/2016
 * Moved source files to src directory

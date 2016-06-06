@@ -4,22 +4,22 @@
   "version": "0.2.6",
   "description": "The social engine open source",
   "license": "MIT",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "start": "node app.js"
   },
   "author": "Antonio Di Motta",
   "dependencies": {
-    "bcrypt": "^0.8.5",
-    "body-parser": "^1.15.0",
-    "cors": "^2.5.3",
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "jsonwebtoken": "^5.7.0",
     "kerberos": "0.0.17",
-    "mongodb": "^2.1.9",
+    "mongodb": "^2.1.21",
     "morgan": "^1.7.0",
     "multer": "^1.1.0",
-    "socket.io": "^1.4.5",
+    "socket.io": "^1.4.6",
     "winston": "^2.2.0"
   },
   "repository": {
