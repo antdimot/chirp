@@ -4,36 +4,28 @@ module.exports = (ctx) => {
     const router = require('express').Router();
 
     // get an user by login and password
-    const authenticate = require('./authenticate')(ctx);
-    router.get('/authenticate/:username/:password', authenticate);
+    router.get('/authenticate/:username/:password', require('./authenticate')(ctx));
 
     // get an user by username
-    const access = require('./access')(ctx);
-    router.get('/access/:username', access);
+    router.get('/access/:username', require('./access')(ctx));
 
     // get the following of an user
-    const following = require('./following')(ctx);
-    router.get('/following/:username', following);
+    router.get('/following/:username', require('./following')(ctx));
 
     // get the followers of an user
-    const followers = require('./followers')(ctx);
-    router.get('/followers/:username', followers);
+    router.get('/followers/:username', require('./followers')(ctx));
 
     // sign up an user
-    const new_user = require('./new')(ctx);
-    router.post('/', new_user);
+    router.post('/', require('./new')(ctx));
 
     // follow an user
-    const follow = require('./follow')(ctx);
-    router.post('/follow', follow);
+    router.post('/follow', require('./follow')(ctx));
 
     // unfollow an user
-    const unfollow = require('./unfollow')(ctx);
-    router.post('unfollow', unfollow);
+    router.post('/unfollow', require('./unfollow')(ctx));
 
     // get the user info
-    const info = require('./info')(ctx);
-    router.get('/info/:username', info);
+    router.get('/info/:username', require('./info')(ctx));
 
     return router;
 }
