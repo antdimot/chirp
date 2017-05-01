@@ -1,4 +1,4 @@
-// This file mongodb script provides the initialization of database chirp. 
+// This mongodb script provides the initialization of database chirp useful for test.
 
 var db = db.getSiblingDB("chirp");
 var user1Id = ObjectId().str;

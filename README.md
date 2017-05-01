@@ -2,7 +2,6 @@
 
 The social engine open source, which has been developed using the [MEAN](https://en.wikipedia.org/wiki/MEAN_(software_bundle)) javascript full stack.
 
-An [online demo](http://chirp.westeurope.cloudapp.azure.com) is hosted on Azure.
 Read the [release notes](https://github.com/antdimot/chirp/blob/master/Releasenotes.md)
 for the last updates. [Activity board](https://trello.com/b/prRPzzir).
 
